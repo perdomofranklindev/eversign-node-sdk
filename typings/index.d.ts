@@ -37,7 +37,7 @@ declare module 'eversign/lib/Client' {
         /**
          * Retrieves the documents by some params. 
          */
-        public getDocuments(type: 'all' | 'my_action_required' | 'waiting_for_others' | 'completed' | 'drafts' | 'cancelled', dataType: 'Document' | 'DocumentTemplate',  limit: number, page: number, search: string): Promise<Document[]>
+        public getDocuments(type?: 'all' | 'my_action_required' | 'waiting_for_others' | 'completed' | 'drafts' | 'cancelled', dataType?: 'Document' | 'DocumentTemplate',  limit?: number, page?: number, search?: string): Promise<Document[]>
         /**
          * Retrieves the documents from eversign API
          */
