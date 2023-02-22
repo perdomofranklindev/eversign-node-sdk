@@ -1,4 +1,4 @@
-declare module 'eversign' {
+declare module 'eversign-enhance' {
 
     export import Client = require('eversign/lib/Client')
     export import Document = require('eversign/lib/Document')
