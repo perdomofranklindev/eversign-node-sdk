@@ -1,6 +1,6 @@
 {
   "name": "eversign-enhance",
-  "version": "1.9.7",
+  "version": "1.10.0",
   "description": "Nodejs client for eversign api",
   "main": "index.js",
   "typings": "typings/index.d.ts",
@@ -14,7 +14,7 @@
   "keywords": [
     "eversign"
   ],
-  "author": "Patrick Leeb",
+  "author": "Patrick Leeb, Franklin Perdomo",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/eversign/eversign-node-sdk/issues"
