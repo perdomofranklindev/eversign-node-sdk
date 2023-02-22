@@ -1,5 +1,5 @@
 {
-  "name": "eversign",
+  "name": "eversign-enhance",
   "version": "1.9.7",
   "description": "Nodejs client for eversign api",
   "main": "index.js",
