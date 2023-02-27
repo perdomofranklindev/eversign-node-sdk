@@ -1,37 +1,37 @@
 declare module 'eversign-enhance' {
 
-    export import Client = require('eversign/lib/Client')
-    export import Document = require('eversign/lib/Document')
-    export import Business = require('eversign/lib/Business')
-    export import AttachmentField = require('eversign/lib/AttachmentField')
-    export import CheckboxField = require('eversign/lib/CheckboxField')
-    export import DateSignedField = require('eversign/lib/DateSignedField')
-    export import Template = require('eversign/lib/DocumentTemplate')  // Note: Not matching regex!
-    export import DropdownField = require('eversign/lib/DropdownField')
-    export import Field = require('eversign/lib/Field')
-    export import File = require('eversign/lib/File')
-    export import FormField = require('eversign/lib/FormField')
-    export import InitialsField = require('eversign/lib/InitialsField')
-    export import NoteField = require('eversign/lib/NoteField')
-    export import RadioField = require('eversign/lib/RadioField')
-    export import Recipient = require('eversign/lib/Recipient')
-    export import Request = require('eversign/lib/Request')
-    export import SignatureField = require('eversign/lib/SignatureField')
-    export import Signer = require('eversign/lib/Signer')
-    export import TextField = require('eversign/lib/TextField')
-    export import CheckboxGroupField = require('eversign/lib/CheckboxGroupField')
-    export import TextFormField = require('eversign/lib/TextFormField')
-    export import OAuthTokenRequest = require('eversign/lib/OAuthTokenRequest')
+    export import Client = require('eversign-enhance/lib/Client')
+    export import Document = require('eversign-enhance/lib/Document')
+    export import Business = require('eversign-enhance/lib/Business')
+    export import AttachmentField = require('eversign-enhance/lib/AttachmentField')
+    export import CheckboxField = require('eversign-enhance/lib/CheckboxField')
+    export import DateSignedField = require('eversign-enhance/lib/DateSignedField')
+    export import Template = require('eversign-enhance/lib/DocumentTemplate')  // Note: Not matching regex!
+    export import DropdownField = require('eversign-enhance/lib/DropdownField')
+    export import Field = require('eversign-enhance/lib/Field')
+    export import File = require('eversign-enhance/lib/File')
+    export import FormField = require('eversign-enhance/lib/FormField')
+    export import InitialsField = require('eversign-enhance/lib/InitialsField')
+    export import NoteField = require('eversign-enhance/lib/NoteField')
+    export import RadioField = require('eversign-enhance/lib/RadioField')
+    export import Recipient = require('eversign-enhance/lib/Recipient')
+    export import Request = require('eversign-enhance/lib/Request')
+    export import SignatureField = require('eversign-enhance/lib/SignatureField')
+    export import Signer = require('eversign-enhance/lib/Signer')
+    export import TextField = require('eversign-enhance/lib/TextField')
+    export import CheckboxGroupField = require('eversign-enhance/lib/CheckboxGroupField')
+    export import TextFormField = require('eversign-enhance/lib/TextFormField')
+    export import OAuthTokenRequest = require('eversign-enhance/lib/OAuthTokenRequest')
 
 }
 
-declare module 'eversign/lib/Client' {
-    import Business = require('eversign/lib/Business')
-    import Document = require('eversign/lib/Document')
-    import File = require('eversign/lib/File')
-    import OAuthTokenRequest = require('eversign/lib/OAuthTokenRequest')
-    import Signer = require('eversign/lib/Signer')
-    import Template = require('eversign/lib/DocumentTemplate')  // Note: Not matching regex!
+declare module 'eversign-enhance/lib/Client' {
+    import Business = require('eversign-enhance/lib/Business')
+    import Document = require('eversign-enhance/lib/Document')
+    import File = require('eversign-enhance/lib/File')
+    import OAuthTokenRequest = require('eversign-enhance/lib/OAuthTokenRequest')
+    import Signer = require('eversign-enhance/lib/Signer')
+    import Template = require('eversign-enhance/lib/DocumentTemplate')  // Note: Not matching regex!
     
     type DocumentKindType = `${Document.DOCUMENT_TYPE}`;
 
@@ -131,13 +131,13 @@ declare module 'eversign/lib/Client' {
     export = Client
 }
 
-declare module 'eversign/lib/Document' {
-    import Client = require('eversign/lib/Client')
-    import File = require('eversign/lib/File')
-    import FormField = require('eversign/lib/FormField')
-    import LogEntry = require('eversign/lib/LogEntry')
-    import Recipient = require('eversign/lib/Recipient')
-    import Signer = require('eversign/lib/Signer')
+declare module 'eversign-enhance/lib/Document' {
+    import Client = require('eversign-enhance/lib/Client')
+    import File = require('eversign-enhance/lib/File')
+    import FormField = require('eversign-enhance/lib/FormField')
+    import LogEntry = require('eversign-enhance/lib/LogEntry')
+    import Recipient = require('eversign-enhance/lib/Recipient')
+    import Signer = require('eversign-enhance/lib/Signer')
 
     class Document {
         constructor(newDocument?: Partial<Document.IObject>)
@@ -364,7 +364,7 @@ declare module 'eversign/lib/Document' {
     export = Document
 }
 
-declare module 'eversign/lib/Business' {
+declare module 'eversign-enhance/lib/Business' {
     class Business {
 
     }
@@ -372,7 +372,7 @@ declare module 'eversign/lib/Business' {
     export = Business
 }
 
-declare module 'eversign/lib/AttachmentField' {
+declare module 'eversign-enhance/lib/AttachmentField' {
     class AttachmentField {
 
     }
@@ -380,7 +380,7 @@ declare module 'eversign/lib/AttachmentField' {
     export = AttachmentField
 }
 
-declare module 'eversign/lib/CheckboxField' {
+declare module 'eversign-enhance/lib/CheckboxField' {
     class CheckboxField {
 
     }
@@ -388,7 +388,7 @@ declare module 'eversign/lib/CheckboxField' {
     export = CheckboxField
 }
 
-declare module 'eversign/lib/DateSignedField' {
+declare module 'eversign-enhance/lib/DateSignedField' {
     class DateSignedField {
 
     }
@@ -396,7 +396,7 @@ declare module 'eversign/lib/DateSignedField' {
     export = DateSignedField
 }
 
-declare module 'eversign/lib/CheckboxGroupField' {
+declare module 'eversign-enhance/lib/CheckboxGroupField' {
     class CheckboxGroupField {
 
     }
@@ -404,12 +404,12 @@ declare module 'eversign/lib/CheckboxGroupField' {
     export = CheckboxGroupField
 }
 
-declare module 'eversign/lib/DocumentTemplate' {
-    import Client = require('eversign/lib/Client')
-    import Field = require('eversign/lib/Field')
-    import File = require('eversign/lib/File')
-    import Recipient = require('eversign/lib/Recipient')
-    import Signer = require('eversign/lib/Signer')
+declare module 'eversign-enhance/lib/DocumentTemplate' {
+    import Client = require('eversign-enhance/lib/Client')
+    import Field = require('eversign-enhance/lib/Field')
+    import File = require('eversign-enhance/lib/File')
+    import Recipient = require('eversign-enhance/lib/Recipient')
+    import Signer = require('eversign-enhance/lib/Signer')
 
     /**
      * An existing template can be used by making an HTTP POST request to the
@@ -530,7 +530,7 @@ declare module 'eversign/lib/DocumentTemplate' {
     export = DocumentTemplate
 }
 
-declare module 'eversign/lib/DropdownField' {
+declare module 'eversign-enhance/lib/DropdownField' {
     class DropdownField {
 
     }
@@ -538,7 +538,7 @@ declare module 'eversign/lib/DropdownField' {
     export = DropdownField
 }
 
-declare module 'eversign/lib/Field' {
+declare module 'eversign-enhance/lib/Field' {
     class Field {
         constructor(newField?: Field.IObject)
         getIdentifier(): string
@@ -563,7 +563,7 @@ declare module 'eversign/lib/Field' {
     export = Field
 }
 
-declare module 'eversign/lib/File' {
+declare module 'eversign-enhance/lib/File' {
     class File {
         constructor(newFile?: Partial<File.IObject>)
         getFileId(): string
@@ -623,7 +623,7 @@ declare module 'eversign/lib/File' {
     export = File
 }
 
-declare module 'eversign/lib/FormField' {
+declare module 'eversign-enhance/lib/FormField' {
     class FormField {
         generateType()
         getFileInde(): FormField.IObject['fileIndex']
@@ -703,7 +703,7 @@ declare module 'eversign/lib/FormField' {
     export = FormField
 }
 
-declare module 'eversign/lib/InitialsField' {
+declare module 'eversign-enhance/lib/InitialsField' {
     class InitialsField {
 
     }
@@ -711,12 +711,12 @@ declare module 'eversign/lib/InitialsField' {
     export = InitialsField
 }
 
-declare module 'eversign/lib/NoteField' {
-    import FormField = require('eversign/lib/FormField')
-    import TextFormField = require('eversign/lib/TextFormField')
-    import Readable = require('eversign/lib/Readable')
-    import Requireable = require('eversign/lib/Requireable')
-    import Signable = require('eversign/lib/Signable')
+declare module 'eversign-enhance/lib/NoteField' {
+    import FormField = require('eversign-enhance/lib/FormField')
+    import TextFormField = require('eversign-enhance/lib/TextFormField')
+    import Readable = require('eversign-enhance/lib/Readable')
+    import Requireable = require('eversign-enhance/lib/Requireable')
+    import Signable = require('eversign-enhance/lib/Signable')
 
     class NoteField {
         constructor(newNoteField?: Partial<NoteField.IObject>)
@@ -751,7 +751,7 @@ declare module 'eversign/lib/NoteField' {
     export = NoteField
 }
 
-declare module 'eversign/lib/RadioField' {
+declare module 'eversign-enhance/lib/RadioField' {
     class RadioField {
 
     }
@@ -759,7 +759,7 @@ declare module 'eversign/lib/RadioField' {
     export = RadioField
 }
 
-declare module 'eversign/lib/Recipient' {
+declare module 'eversign-enhance/lib/Recipient' {
     class Recipient {
 
     }
@@ -767,7 +767,7 @@ declare module 'eversign/lib/Recipient' {
     export = Recipient
 }
 
-declare module 'eversign/lib/Request' {
+declare module 'eversign-enhance/lib/Request' {
     class Request {
 
     }
@@ -775,10 +775,10 @@ declare module 'eversign/lib/Request' {
     export = Request
 }
 
-declare module 'eversign/lib/SignatureField' {
-    import FormField = require('eversign/lib/FormField')
-    import Requireable = require('eversign/lib/Requireable')
-    import Signable = require('eversign/lib/Signable')
+declare module 'eversign-enhance/lib/SignatureField' {
+    import FormField = require('eversign-enhance/lib/FormField')
+    import Requireable = require('eversign-enhance/lib/Requireable')
+    import Signable = require('eversign-enhance/lib/Signable')
 
     class SignatureField {
         constructor(newNoteField?: Partial<SignatureField.IObject>)
@@ -793,7 +793,7 @@ declare module 'eversign/lib/SignatureField' {
     export = SignatureField
 }
 
-declare module 'eversign/lib/Signer' {
+declare module 'eversign-enhance/lib/Signer' {
     class Signer {
         constructor(signerObject?: Partial<Signer.IObject>)
         getDeclined(): boolean
@@ -948,8 +948,8 @@ declare module 'eversign/lib/Signer' {
     export = Signer
 }
 
-declare module 'eversign/lib/TextField' {
-    import NoteField = require('eversign/lib/NoteField')
+declare module 'eversign-enhance/lib/TextField' {
+    import NoteField = require('eversign-enhance/lib/NoteField')
     class TextField {
         constructor(newTextField?: Partial<TextField.IObject>)
     }
@@ -962,8 +962,8 @@ declare module 'eversign/lib/TextField' {
     export = TextField
 }
 
-declare module 'eversign/lib/TextFormField' {
-    import FormField = require('eversign/lib/FormField')
+declare module 'eversign-enhance/lib/TextFormField' {
+    import FormField = require('eversign-enhance/lib/FormField')
 
     class TextFormField extends FormField {
         constructor(newTextFormField?: TextFormField.IObject)
@@ -1027,7 +1027,7 @@ declare module 'eversign/lib/TextFormField' {
     export = TextFormField
 }
 
-declare module 'eversign/lib/OAuthTokenRequest' {
+declare module 'eversign-enhance/lib/OAuthTokenRequest' {
     class OAuthTokenRequest {
 
     }
@@ -1035,7 +1035,7 @@ declare module 'eversign/lib/OAuthTokenRequest' {
     export = OAuthTokenRequest
 }
 
-declare module 'eversign/lib/Readable' {
+declare module 'eversign-enhance/lib/Readable' {
     class Readable {
         getreadOnly(): Readable.IObject['readOnly']
         setReadOnly(readOnly: Readable.IObject['readOnly']): void
@@ -1052,7 +1052,7 @@ declare module 'eversign/lib/Readable' {
     export = Readable
 }
 
-declare module 'eversign/lib/Requireable' {
+declare module 'eversign-enhance/lib/Requireable' {
     class Requireable {
         getRequired(): Requireable.IObject['required']
         setRequired(required: Requireable.IObject['required']): void
@@ -1069,7 +1069,7 @@ declare module 'eversign/lib/Requireable' {
     export = Requireable
 }
 
-declare module 'eversign/lib/Signable' {
+declare module 'eversign-enhance/lib/Signable' {
     class Signable {
         getSigner(): Signable.IObject['signer']
         setSigner(signer: Signable.IObject['signer']): void
@@ -1086,7 +1086,7 @@ declare module 'eversign/lib/Signable' {
     export = Signable
 }
 
-declare module 'eversign/lib/LogEntry' {
+declare module 'eversign-enhance/lib/LogEntry' {
     class LogEntry {
         constructor(newLogEntry: LogEntry)
         getEvent(): LogEntry.LOG_EVENT
