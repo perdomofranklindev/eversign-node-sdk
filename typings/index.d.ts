@@ -23,8 +23,17 @@ declare module 'eversign-enhance' {
     export import TextFormField = require('eversign-enhance/lib/TextFormField')
     export import OAuthTokenRequest = require('eversign-enhance/lib/OAuthTokenRequest')
 
-}
+    export enum DOCUMENT_TYPE {
+        ALL = 'all',
+        MY_ACTION_REQUIRED = 'my_action_required',
+        WAITING_FOR_OTHERS = 'waiting_for_others',
+        COMPLETED = 'completed',
+        DRAFTS = 'drafts',
+        CANCELLED = 'cancelled', 
+    }
 
+    export type DocumentType = `${DOCUMENT_TYPE}`;
+}
 declare module 'eversign-enhance/lib/Client' {
     import Business = require('eversign-enhance/lib/Business')
     import Document = require('eversign-enhance/lib/Document')
@@ -32,15 +41,14 @@ declare module 'eversign-enhance/lib/Client' {
     import OAuthTokenRequest = require('eversign-enhance/lib/OAuthTokenRequest')
     import Signer = require('eversign-enhance/lib/Signer')
     import Template = require('eversign-enhance/lib/DocumentTemplate')  // Note: Not matching regex!
+    import { DocumentType } from 'eversign-enhance';
     
-    type DocumentKindType = `${Document.DOCUMENT_TYPE}`;
-
     class Client {
         public constructor(accessKey: string, businessId: number)
         /**
          * Retrieves the documents by some params. 
          */
-        public getDocuments(type?: DocumentKindType, dataType?: 'Document' | 'DocumentTemplate',  limit?: number, page?: number, search?: string): Promise<Document[]>
+        public getDocuments(type?: DocumentType, dataType?: 'Document' | 'DocumentTemplate',  limit?: number, page?: number, search?: string): Promise<Document[]>
         /**
          * Retrieves the documents from eversign API
          */
@@ -350,15 +358,6 @@ declare module 'eversign-enhance/lib/Document' {
              */
             embeddedSigningEnabled: boolean,
 
-        }
-
-        enum DOCUMENT_TYPE {
-            ALL = 'all',
-            MY_ACTION_REQUIRED = 'my_action_required',
-            WAITING_FOR_OTHERS = 'waiting_for_others',
-            COMPLETED = 'completed',
-            DRAFTS = 'drafts',
-            CANCELLED = 'cancelled', 
         }
     }
     export = Document
