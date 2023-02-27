@@ -22,21 +22,6 @@ declare module 'eversign-enhance' {
     export import CheckboxGroupField = require('eversign-enhance/lib/CheckboxGroupField')
     export import TextFormField = require('eversign-enhance/lib/TextFormField')
     export import OAuthTokenRequest = require('eversign-enhance/lib/OAuthTokenRequest')
-    export import DocumentKindType = require("eversign-enhance/types");
-}
-
-declare module "eversign-enhance/types" {
-    export namespace DocumentKindType {
-        enum DOCUMENT_TYPE {
-            ALL = "all",
-            MY_ACTION_REQUIRED = "my_action_required",
-            WAITING_FOR_OTHERS = "waiting_for_others",
-            COMPLETED = "completed",
-            DRAFTS = "drafts",
-            CANCELLED = "cancelled",
-        }
-    }
-    export type DocumentType = `${DocumentKindType.DOCUMENT_TYPE}`;
 }
 declare module 'eversign-enhance/lib/Client' {
     import Business = require('eversign-enhance/lib/Business')
@@ -44,8 +29,7 @@ declare module 'eversign-enhance/lib/Client' {
     import File = require('eversign-enhance/lib/File')
     import OAuthTokenRequest = require('eversign-enhance/lib/OAuthTokenRequest')
     import Signer = require('eversign-enhance/lib/Signer')
-    import Template = require('eversign-enhance/lib/DocumentTemplate')  // Note: Not matching regex!
-    import { DocumentType } from 'eversign-enhance/types'; 
+    import Template = require('eversign-enhance/lib/DocumentTemplate')  // Note: Not matching regex! 
     
     class Client {
         public constructor(accessKey: string, businessId: number)
