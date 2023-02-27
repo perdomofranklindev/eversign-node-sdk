@@ -32,12 +32,15 @@ declare module 'eversign/lib/Client' {
     import OAuthTokenRequest = require('eversign/lib/OAuthTokenRequest')
     import Signer = require('eversign/lib/Signer')
     import Template = require('eversign/lib/DocumentTemplate')  // Note: Not matching regex!
+    
+    type DocumentKindType = `${Document.DOCUMENT_TYPE}`;
+
     class Client {
         public constructor(accessKey: string, businessId: number)
         /**
          * Retrieves the documents by some params. 
          */
-        public getDocuments(type?: DocumentType, dataType?: 'Document' | 'DocumentTemplate',  limit?: number, page?: number, search?: string): Promise<Document[]>
+        public getDocuments(type?: DocumentKindType, dataType?: 'Document' | 'DocumentTemplate',  limit?: number, page?: number, search?: string): Promise<Document[]>
         /**
          * Retrieves the documents from eversign API
          */
@@ -349,7 +352,7 @@ declare module 'eversign/lib/Document' {
 
         }
 
-        enum DOCUMENT_TYPE_ENUM {
+        enum DOCUMENT_TYPE {
             ALL = 'all',
             MY_ACTION_REQUIRED = 'my_action_required',
             WAITING_FOR_OTHERS = 'waiting_for_others',
@@ -357,7 +360,6 @@ declare module 'eversign/lib/Document' {
             DRAFTS = 'drafts',
             CANCELLED = 'cancelled', 
         }
-        type DocumentType = `${DOCUMENT_TYPE_ENUM}`;
     }
     export = Document
 }
