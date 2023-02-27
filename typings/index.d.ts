@@ -103,7 +103,6 @@ declare module "eversign-enhance/lib/Client" {
          */
         public deleteDocument(document: Document, type: string): Promise<void>;
         public cancelDocument(document: Document): Promise<void>;
-        public downloadFinalDocument(document:Document, auditTrail?: boolean): Promise<boolean>;
         /**
          * Downloads the completed Document. Only works on Documents that have
          * been completed. If you want the Audit Trail on the downloaded File
