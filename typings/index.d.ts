@@ -36,7 +36,7 @@ declare module "eversign-enhance/lib/Client" {
          * Retrieves the documents by some params.
          */
         public getDocuments(
-            type?: "all" | "my_action_required" | "waiting_for_others" | "completed" | "drafts" | "cancelled",
+            type?: "all" | "my_action_required" | "waiting_for_others" | "completed" | "drafts" | "cancelled" | "templates",
             dataType?: "Document" | "DocumentTemplate",
             limit?: number,
             page?: number,
